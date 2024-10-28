@@ -84,9 +84,10 @@
     </style>
   </head>
 <body>
+
     <div class="container">
-        <h1>Support Form</h1>
-        <form id="supportForm" action="https://script.google.com/macros/s/AKfycby5jdx-ba9xIaFr-KboZK16MJU6NcnoOQx_74r6PR5aKOw_eCW6Jq2s-lwtOVpJNAZH/exec" method="POST" enctype="multipart/form-data">
+        <h1>Ticket Form</h1>
+        <form id="supportForm" action="https://script.google.com/macros/s/AKfycby6gDfgiiaovm1-wAdS3agtSjW20ZQ_V2hdlX-AnXBHMW3sRLlarwGJOnAOzUrrfeZ2/exec" method="POST" enctype="multipart/form-data">
             <label for="dropdown1">Reason for Contact:</label>
             <select id="dropdown1" name="reasonForTicket" required>
                 <option value="">Select reason</option>
@@ -121,6 +122,8 @@
             <label for="uploadButton1">Attach File:</label>
             <input type="file" id="uploadButton1" name="file" accept=".png,.jpg,.jpeg,.gif,.pdf">
 
+            <div id="fileNameText" class="hidden"></div>
+
             <button type="submit" id="button249">Submit</button>
         </form>
 
@@ -129,7 +132,7 @@
     </div>
 
     <script>
-        // Optional: Добавьте JavaScript для улучшения UX, например, отображение имени файла
+        // Optional: Add JavaScript for enhanced UX, such as displaying the selected file name
         document.getElementById('uploadButton1').addEventListener('change', function() {
             const fileNameText = document.getElementById('fileNameText');
             if (this.files.length > 0) {
